@@ -6,6 +6,6 @@ public interface IClienteRepository
 {
     Task<Cliente> AdicionarAsync(Cliente cliente);
     Task<Cliente> ExcluirAsync(Cliente cliente);
-    Task<Cliente> Async(Cliente cliente);
+    Task<Cliente> AtualizarAsync(Cliente cliente);
     Task<Cliente> BuscarPorIdAsync(Cliente cliente);
 }
