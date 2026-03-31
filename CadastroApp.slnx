@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="CadastroApp.Application/CadastroApp.Application.csproj" Id="b000d5a2-6488-4698-a3fe-bf9122dff2c5" />
+  <Project Path="CadastroApp.Domain/CadastroApp.Domain.csproj" />
+</Solution>
