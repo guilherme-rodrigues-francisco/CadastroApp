@@ -28,4 +28,9 @@ public interface IClienteRepository
     /// Busca todos clientes no DB
     /// </summary>
     Task<List<Cliente>> ListarTodosAsync();
+
+    ///<summary>
+    ///Busca clientes ativos no DB
+    ///</summary>
+    Task<List<Cliente>> ListarAtivosAsync();
 }
