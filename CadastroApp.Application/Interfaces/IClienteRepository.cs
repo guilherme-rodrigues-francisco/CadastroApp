@@ -22,7 +22,7 @@ public interface IClienteRepository
     /// <summary>
     /// Busca um cliente especifico usando o Id
     /// </summary>
-    Task<Cliente> BuscarPorIdAsync(int id);
+    Task<Cliente?> BuscarPorIdAsync(int id);
 
     /// <summary>
     /// Busca todos clientes no DB
