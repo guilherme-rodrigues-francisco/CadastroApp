@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CadastroApp.Application\CadastroApp.Application.csproj" />
+    <ProjectReference Include="..\CadastroApp.Domain\CadastroApp.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
