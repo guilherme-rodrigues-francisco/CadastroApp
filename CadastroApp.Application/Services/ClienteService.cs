@@ -42,7 +42,7 @@ public class ClienteService
 
         try
         {
-            var clienteSalvo = await _clienteRepository.AdicionarAsync(cliente);
+            var clienteSalvo = await _clienteRepository.AtualizarAsync(cliente);
             return (true, new List<string>(), clienteSalvo);
         }
         catch (Exception ex)
