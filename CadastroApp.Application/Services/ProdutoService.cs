@@ -73,4 +73,19 @@ public class ProdutoService
             return (false, $"Erro ao excluir produto: {ex.Message}");
         }
     }
+
+    public async Task<Produto?> BuscarProdutoPorIdAsync(int id)
+    {
+        return await _produtoRepository.BuscarPorIdAsync(id);
+    }
+
+    public async Task<List<Produto>> ListarTodosProdutosAsync()
+    {
+        return await _produtoRepository.ListarTodosAsync();
+    }
+
+    public async Task<List<Produto>> ListarProdutosAtivosAsync()
+    {
+        return await _produtoRepository.ListarAtivosAsync();
+    }
 }
