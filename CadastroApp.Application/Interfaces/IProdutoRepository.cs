@@ -10,5 +10,5 @@ public interface IProdutoRepository
     Task<Produto?> BuscarPorIdAsync(int id);
     Task<Produto?> BuscarPorCodigoBarraAsync(string codigoBarra);
     Task<List<Produto>> ListarTodosAsync();
-     Task<List<Produto>> ListarAtivosAsync();
+    Task<List<Produto>> ListarAtivosAsync();
 }
