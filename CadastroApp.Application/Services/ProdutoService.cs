@@ -39,8 +39,8 @@ public class ProdutoService
         if (erros.Any())
             return (false, erros, null);
 
-        var produtoExistente = await _produtoRepository.BuscarPorIdAsync(produto.Id);
-        if (produtoExistente == null)
+        var produtoExistentente = await _produtoRepository.BuscarPorIdAsync(produto.Id);
+        if (produtoExistentente == null)
             return (false, new List<string> { "Produto não encontrado." }, null);
 
         var codigoBarraEmUso = await _produtoRepository.BuscarPorCodigoBarraAsync(produto.CodigoBarra);
@@ -55,6 +55,22 @@ public class ProdutoService
         catch (Exception ex)
         {
             return(false, new List<string> { $"Erro ao salvar Produto: {ex.Message}" }, null);
+        }
+    }
+
+    public async Task<(bool Sucesso, string Mensagem)> ExcluirProdutoAsync(int id)
+    {
+        try
+        {
+            var produtoExistente = await _produtoRepository.BuscarPorIdAsync(id);
+            if (produtoExistente == null)
+                return (false, "Produto não encontrado.");
+            var produtoRemovido = await _produtoRepository.ExcluirAsync(id);
+            return produtoRemovido ? (true, "Produto removido com sucesso!") : (false, "Não foi possível excluir o Produto.");
+        }
+        catch (Exception ex)
+        {
+            return (false, $"Erro ao excluir produto: {ex.Message}");
         }
     }
 }
