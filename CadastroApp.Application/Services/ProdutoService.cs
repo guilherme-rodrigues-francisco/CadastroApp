@@ -39,8 +39,8 @@ public class ProdutoService
         if (erros.Any())
             return (false, erros, null);
 
-        var produtoExistentente = await _produtoRepository.BuscarPorIdAsync(produto.Id);
-        if (produtoExistentente == null)
+        var produtoExistente  = await _produtoRepository.BuscarPorIdAsync(produto.Id);
+        if (produtoExistente  == null)
             return (false, new List<string> { "Produto não encontrado." }, null);
 
         var codigoBarraEmUso = await _produtoRepository.BuscarPorCodigoBarraAsync(produto.CodigoBarra);
