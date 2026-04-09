@@ -2,4 +2,5 @@
   <Project Path="CadastroApp.Application/CadastroApp.Application.csproj" Id="b000d5a2-6488-4698-a3fe-bf9122dff2c5" />
   <Project Path="CadastroApp.Domain/CadastroApp.Domain.csproj" />
   <Project Path="CadastroApp.Infrastructure/CadastroApp.Infrastructure.csproj" Id="edb1cf7b-581b-420e-9e9d-4fe562044a1a" />
+  <Project Path="CadastroApp.UI/CadastroApp.UI.csproj" Id="81132dd6-a4bb-44dd-90d5-2212cb3fdb01" />
 </Solution>
